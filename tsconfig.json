@@ -1,26 +1,49 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    /* type safety */
     "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    /* modules */
     "module": "esnext",
     "moduleResolution": "bundler",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    /* Emit */
+    "noEmit": true,
+    /* JavaScript Support */
+    "allowJs": true,
+    /* Editor Support */
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    /* Language and Environment */
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    /* Projects */
+    "incremental": true,
+    /* Completeness */
+    "skipLibCheck": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.mjs",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
